@@ -76,7 +76,7 @@ export const useCamera = (cameraOptions = initialCameraState) => {
             toggleCameraState,
             takePicture: (options: TakePictureOptions) => _takePicture({ cameraRef }, options),
             recordVideo: (options: RecordOptions) => _recordVideo({ cameraRef }, options),
-            stopRecording: () => _stopRecording({ cameraRef }),
+            stopRecording: () => _stopRecording(cameraRef),
             pausePreview: () => _pausePreview(cameraRef),
             isRecording,
             resumePreview: () => _resumePreview(cameraRef),

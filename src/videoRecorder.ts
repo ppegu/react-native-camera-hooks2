@@ -12,7 +12,7 @@ export const recordVideo = async (
     }
 };
 
-export const stopRecording = async ({ cameraRef }: any): Promise<any> => {
+export const stopRecording = async (cameraRef: any): Promise<any> => {
     if (cameraRef && cameraRef.stopRecording) {
         return cameraRef.stopRecording();
     } else if (cameraRef && cameraRef.current && cameraRef.current.stopRecording) {
