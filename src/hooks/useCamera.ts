@@ -9,7 +9,7 @@ import { useFaceDetection } from './useFaceDetection';
 import { useTextRecognition } from './useTextRecognition';
 import { useFlash, useWhiteBalance, useAutoFocus, useToggleFacing } from './useToggle';
 import { takePicture as _takePicture } from '../takePicture';
-import { recordVideo as _recordVideo } from '../videoRecorder';
+import { recordVideo as _recordVideo, stopRecording as _stopRecording } from '../videoRecorder';
 import { pausePreview as _pausePreview, resumePreview as _resumePreview } from '../preview';
 
 export const useCamera = (cameraOptions = initialCameraState) => {
@@ -76,7 +76,7 @@ export const useCamera = (cameraOptions = initialCameraState) => {
             toggleCameraState,
             takePicture: (options: TakePictureOptions) => _takePicture({ cameraRef }, options),
             recordVideo: (options: RecordOptions) => _recordVideo({ cameraRef }, options),
-            stopRecording,
+            stopRecording: () => _stopRecording({ cameraRef }),
             pausePreview: () => _pausePreview(cameraRef),
             isRecording,
             resumePreview: () => _resumePreview(cameraRef),
