@@ -3,10 +3,17 @@
     "version": "1.0.0",
     "description": "React Mative Camera Hooks",
     "main": "dist/index.js",
+    "files": [
+        "dist/**/*"
+    ],
     "scripts": {
         "build": "tsc",
         "format": "prettier --write \"src/**/*.ts\"",
-        "lint": "tslint -p tsconfig.json"
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
     },
     "keywords": [
         "react-native-camera-hooks"
