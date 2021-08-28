@@ -1,0 +1,27 @@
+{
+    "name": "react-native-camera-hooks2",
+    "version": "1.0.0",
+    "description": "React Mative Camera Hooks",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc"
+    },
+    "keywords": [
+        "react-native-camera-hooks"
+    ],
+    "author": "Pran Pegu",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-native": "^0.65.1",
+        "react-native-camera": "^4.1.1"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.19",
+        "@types/react-native": "^0.64.13",
+        "typescript": "^4.4.2"
+    },
+    "resolutions": {
+        "@types/react": "^17"
+    }
+}
