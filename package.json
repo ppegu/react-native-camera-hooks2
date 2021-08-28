@@ -1,6 +1,6 @@
 {
     "name": "react-native-camera-hooks2",
-    "version": "1.0.0",
+    "version": "1.0.01",
     "description": "React Mative Camera Hooks",
     "main": "dist/index.js",
     "scripts": {

@@ -60,7 +60,7 @@ export declare const useCamera: (cameraOptions?: import("../interfaces").CameraO
     toggleCameraState: any;
     takePicture: (options: TakePictureOptions) => Promise<import("../takePicture").TakePictureResponse | undefined>;
     recordVideo: (options: RecordOptions) => Promise<import("../interfaces").RecordResponse | undefined>;
-    stopRecording: ({ cameraRef }: any) => Promise<any>;
+    stopRecording: () => Promise<any>;
     pausePreview: () => Promise<boolean>;
     isRecording: boolean;
     resumePreview: () => Promise<boolean>;

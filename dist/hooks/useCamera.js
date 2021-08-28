@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.useCamera = void 0;
 const react_1 = require("react");
 const constants_1 = require("../constants");
-const videoRecorder_1 = require("../videoRecorder");
 const useAutoFocus_1 = require("./useAutoFocus");
 const misc_1 = require("./misc");
 const useBarcodeDetection_1 = require("./useBarcodeDetection");
@@ -11,7 +10,7 @@ const useFaceDetection_1 = require("./useFaceDetection");
 const useTextRecognition_1 = require("./useTextRecognition");
 const useToggle_1 = require("./useToggle");
 const takePicture_1 = require("../takePicture");
-const videoRecorder_2 = require("../videoRecorder");
+const videoRecorder_1 = require("../videoRecorder");
 const preview_1 = require("../preview");
 const useCamera = (cameraOptions = constants_1.initialCameraState) => {
     const mergedCameraOptions = Object.assign(Object.assign({}, constants_1.initialCameraState), cameraOptions);
@@ -67,8 +66,8 @@ const useCamera = (cameraOptions = constants_1.initialCameraState) => {
             setFocusDepth,
             toggleCameraState,
             takePicture: (options) => (0, takePicture_1.takePicture)({ cameraRef }, options),
-            recordVideo: (options) => (0, videoRecorder_2.recordVideo)({ cameraRef }, options),
-            stopRecording: videoRecorder_1.stopRecording,
+            recordVideo: (options) => (0, videoRecorder_1.recordVideo)({ cameraRef }, options),
+            stopRecording: () => (0, videoRecorder_1.stopRecording)({ cameraRef }),
             pausePreview: () => (0, preview_1.pausePreview)(cameraRef),
             isRecording,
             resumePreview: () => (0, preview_1.resumePreview)(cameraRef),
