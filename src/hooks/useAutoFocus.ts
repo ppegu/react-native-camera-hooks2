@@ -1,15 +1,13 @@
-import { useState, useCallback } from "react";
-import { Dimensions } from "react-native";
+import { useState, useCallback } from 'react';
+import { Dimensions } from 'react-native';
 
-export const useAutoFocusTouch = (
-    state = {}
-): [any, { touchToFocus: Function; setAutoFocusPoint: Function }] => {
+export const useAutoFocusTouch = (state = {}): [any, { touchToFocus: Function; setAutoFocusPoint: Function }] => {
     const [autoFocusPoint, setAutoFocusPoint] = useState(state);
 
     const touchToFocus = useCallback((event) => {
         const { pageX, pageY } = event.nativeEvent;
-        const screenWidth = Dimensions.get("window").width;
-        const screenHeight = Dimensions.get("window").height;
+        const screenWidth = Dimensions.get('window').width;
+        const screenHeight = Dimensions.get('window').height;
         const isPortrait = screenHeight > screenWidth;
 
         let x = pageX / screenWidth;

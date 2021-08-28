@@ -1,9 +1,9 @@
-import { defaultVideoRecordOptions } from "./constants";
-import { RecordOptions, RecordResponse } from "./interfaces";
+import { defaultVideoRecordOptions } from './constants';
+import { RecordOptions, RecordResponse } from './interfaces';
 
 export const recordVideo = async (
     { cameraRef }: any,
-    options: RecordOptions = defaultVideoRecordOptions
+    options: RecordOptions = defaultVideoRecordOptions,
 ): Promise<RecordResponse | undefined> => {
     if (cameraRef && cameraRef.recordAsync) {
         return cameraRef.recordAsync(options);

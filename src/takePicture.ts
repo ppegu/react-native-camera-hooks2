@@ -1,4 +1,4 @@
-import { TakePictureOptions, defaultPictureTakeOptions } from "./interfaces";
+import { TakePictureOptions, defaultPictureTakeOptions } from './interfaces';
 
 export interface TakePictureResponse {
     width: number;
@@ -12,15 +12,11 @@ export interface TakePictureResponse {
 
 export const takePicture = async (
     { cameraRef }: { cameraRef: any },
-    options: TakePictureOptions = defaultPictureTakeOptions
+    options: TakePictureOptions = defaultPictureTakeOptions,
 ): Promise<TakePictureResponse | undefined> => {
     if (cameraRef && cameraRef.takePictureAsync) {
         return cameraRef.takePictureAsync(options);
-    } else if (
-        cameraRef &&
-        cameraRef.current &&
-        cameraRef.current.takePictureAsync
-    ) {
+    } else if (cameraRef && cameraRef.current && cameraRef.current.takePictureAsync) {
         return cameraRef.current.takePictureAsync(options);
     }
 };

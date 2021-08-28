@@ -10,10 +10,5 @@ export {
     useToggleFacing,
     useWhiteBalance,
     useZoom,
-} from "./hooks";
-export {
-    CameraOptions,
-    RecordOptions,
-    RecordResponse,
-    TakePictureOptions,
-} from "./interfaces";
+} from './hooks';
+export { CameraOptions, RecordOptions, RecordResponse, TakePictureOptions } from './interfaces';

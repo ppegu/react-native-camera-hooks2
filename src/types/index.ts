@@ -46,13 +46,13 @@ export type BarCodeType = Readonly<{
     datamatrix: any;
 }>;
 export type VideoQuality = Readonly<{
-    "2160p": any;
-    "1080p": any;
-    "720p": any;
-    "480p": any;
-    "4:3": any;
+    '2160p': any;
+    '1080p': any;
+    '720p': any;
+    '480p': any;
+    '4:3': any;
     /** iOS Only. Android not supported. */
-    "288p": any;
+    '288p': any;
 }>;
 export type VideoCodec = Readonly<{
     H264: symbol;
@@ -92,13 +92,11 @@ export type GoogleVisionBarcodeMode = Readonly<{
 
 // FaCC (Function as Child Components)
 export type Self<T> = { [P in keyof T]: P };
-export type CameraStatus = Readonly<
-    Self<{ READY: any; PENDING_AUTHORIZATION: any; NOT_AUTHORIZED: any }>
->;
+export type CameraStatus = Readonly<Self<{ READY: any; PENDING_AUTHORIZATION: any; NOT_AUTHORIZED: any }>>;
 export type RecordAudioPermissionStatus = Readonly<
     Self<{
-        AUTHORIZED: "AUTHORIZED";
-        PENDING_AUTHORIZATION: "PENDING_AUTHORIZATION";
-        NOT_AUTHORIZED: "NOT_AUTHORIZED";
+        AUTHORIZED: 'AUTHORIZED';
+        PENDING_AUTHORIZATION: 'PENDING_AUTHORIZATION';
+        NOT_AUTHORIZED: 'NOT_AUTHORIZED';
     }>
 >;

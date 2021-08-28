@@ -1,8 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-export const useZoom = (
-    state = 0
-): [number, { setZoom: Function; zoomIn: Function; zoomOut: Function }] => {
+export const useZoom = (state = 0): [number, { setZoom: Function; zoomIn: Function; zoomOut: Function }] => {
     const [zoom, setZoom] = useState(state);
 
     const zoomIn = () => {

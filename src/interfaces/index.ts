@@ -1,4 +1,4 @@
-import { FlashMode, AutoFocus, CameraType, WhiteBalance } from "../types";
+import { FlashMode, AutoFocus, CameraType, WhiteBalance } from '../types';
 
 export interface RecordResponse {
     uri: string;
@@ -69,5 +69,5 @@ export const defaultPictureTakeOptions: TakePictureOptions = {
     exif: true,
     forceUpOrientation: true,
     fixOrientation: true,
-    orientation: "portrait",
+    orientation: 'portrait',
 };
